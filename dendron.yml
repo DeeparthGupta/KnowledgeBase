@@ -101,3 +101,5 @@ publishing:
         action: useVault
         payload:
             - vault
+site:
+    siteUrl: https://deeparthgupta.github.io
