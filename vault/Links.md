@@ -2,11 +2,10 @@
 id: dzr6esc9es3dm2na3pv8hh1
 title: Links
 desc: ''
-updated: 1646550158204
+updated: 1652154103479
 created: 1646400910128
 ---
 #### Font Detection
-- [Text detection on Seven Segment Display via Tesseract OCR](https://stackoverflow.com/questions/17672705/text-detection-on-seven-segment-display-via-tesseract-ocr)
 - [Tesseract documentation](https://tesseract-ocr.github.io/tessdoc/)
 - [Tesseract Github](https://github.com/tesseract-ocr/tesseract)
 
