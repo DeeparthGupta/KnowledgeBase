@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@dendronhq/dendron-cli": "^0.84.0"
+    "@dendronhq/dendron-cli": "^0.103.0"
   },
   "name": "knowledgebase",
   "version": "1.0.0",

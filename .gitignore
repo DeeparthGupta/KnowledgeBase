@@ -7,3 +7,5 @@ pods/service-connections
 
 .nvmrc
 package-lock.json
+
+.backup
