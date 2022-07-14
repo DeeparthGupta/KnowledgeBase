@@ -1,0 +1,38 @@
+{
+  "roots": [
+    {
+      "key": "1a4tk6w6d1hqa9hydfatd2h",
+      "title": "Root",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "navExclude": false,
+      "children": [
+        {
+          "key": "dzr6esc9es3dm2na3pv8hh1",
+          "title": "Links",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "navExclude": false,
+          "children": []
+        },
+        {
+          "key": "v08egsqxbv3m0u532jzo03l",
+          "title": "Specify alternate project-level README on Github",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "navExclude": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "403": null,
+    "1a4tk6w6d1hqa9hydfatd2h": null,
+    "v08egsqxbv3m0u532jzo03l": "1a4tk6w6d1hqa9hydfatd2h",
+    "dzr6esc9es3dm2na3pv8hh1": "1a4tk6w6d1hqa9hydfatd2h"
+  }
+}

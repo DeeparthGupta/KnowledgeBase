@@ -1,0 +1,40 @@
+<h1 id="specify-alternate-project-level-readme-on-github"><a aria-hidden="true" class="anchor-heading icon-link" href="#specify-alternate-project-level-readme-on-github"></a>Specify alternate project-level README on Github</h1>
+<p><a href="https://stackoverflow.com/a/49981731/5930856">Stackoverflow source</a>
+<br>
+<br></p>
+<p><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">Github Searches for README.md in a few places</a></p>
+<blockquote>
+<p>If you put your README file in your repository's root, docs, or hidden .github directory, GitHub will recognize and automatically surface your README to repository visitors.</p>
+</blockquote>
+<p>To use another file as the project level readme create a <a href="https://en.wikipedia.org/wiki/Symbolic_link">Symlink</a> from the file to a location inside <code>.github</code> folder <strong>in the project root</strong>.</p>
+<h3 id="on-linux-and-mac"><a aria-hidden="true" class="anchor-heading icon-link" href="#on-linux-and-mac"></a>On Linux and Mac</h3>
+<pre class="language-shell"><code class="language-Shell"><span class="token comment"># From repository root</span>
+<span class="token function">mkdir</span> .github
+<span class="token builtin class-name">cd</span> .github
+<span class="token function">ln</span> -s <span class="token punctuation">..</span>/docs/projectname/some-README.md README.md  
+</code></pre>
+<h3 id="on-windows"><a aria-hidden="true" class="anchor-heading icon-link" href="#on-windows"></a>On Windows</h3>
+<p>Symbolic links are only available on NTFS filesystems on Windows Vista or later, and creating them requires <a href="https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10/">Developer Mode</a>. They are not supported by <a href="https://github.com/git-for-windows/git/wiki/Symbolic-Links">Git on Windows out of the box</a>.</p>
+<ol>
+<li><code>cd</code> to the root of the repo and enable symlinks:
+<pre class="language-shell"><code class="language-Shell">  <span class="token function">git</span> config core.symlinks <span class="token boolean">true</span>
+</code></pre>
+</li>
+<li>Launch <code>cmd.exe</code> as Administrator:
+<pre class="language-shell"><code class="language-Shell"><span class="token comment"># From repository root</span>
+<span class="token function">mkdir</span> .github
+<span class="token builtin class-name">cd</span> .github
+mklink README.md <span class="token punctuation">..</span><span class="token punctuation">\</span>docs<span class="token punctuation">\</span>projectname<span class="token punctuation">\</span>some-README.md
+</code></pre>
+</li>
+<li>Ensure there are no other README files anywhere else that github searches in.</li>
+<li>Windows users who clone the repository won't get a symlink automatically. If they wish to have that behaviour they should clone with a special argument:
+<pre class="language-shell"><code class="language-Shell"><span class="token function">git</span> clone -c core.symlinks<span class="token operator">=</span>true <span class="token operator">&#x3C;</span>repo-url<span class="token operator">></span>
+</code></pre>
+</li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/">Root</a></li>
+</ul>
