@@ -55,11 +55,11 @@ workspace:
         createTaskSelectionType: selection2link
         taskCompleteStatus:
             - done
-            - x       
+            - x
     graph:
         zoomSpeed: 1
         createStub: false
-    enableAutoCreateOnDefinition: true
+    enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
     enableUserTags: true
@@ -81,7 +81,7 @@ preview:
     enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
-    automaticallyShowPreview: true
+    automaticallyShowPreview: false
 publishing:
     enableFMTitle: true
     enableNoteTitleForLink: true

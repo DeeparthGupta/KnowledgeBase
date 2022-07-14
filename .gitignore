@@ -9,3 +9,5 @@ pods/service-connections
 package-lock.json
 
 .backup
+
+.vscode
